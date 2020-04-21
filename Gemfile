@@ -51,6 +51,8 @@ group :development do
   # Guard is a command line tool to easily handle events on file system modifications.
   gem 'guard', '~> 2.16', '>= 2.16.2'
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
+  # Provides a better error page for Rails and other Rack apps
+  gem 'better_errors', '~> 2.6'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -58,8 +60,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # MY GEMS
 
-# Provides a better error page for Rails and other Rack apps
-gem 'better_errors', '~> 2.6'
 # Hirb provides a mini view framework for console applications 
 gem 'hirb', '~> 0.7.3'
 # A modern CSS framework based on Flexbox
