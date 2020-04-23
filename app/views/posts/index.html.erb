@@ -1,2 +1,27 @@
 <h1 class="title">Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+
+<% @posts.each do |post| %>
+  <div class="card">
+    <div class="card-image">
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
+          <p class="title is-4"><%=post.title %></p>
+        </div>
+      </div>
+
+      <div class="content">
+        <%= post.content %>
+      </div>
+      <div class="content">
+        <%= link_to "Read more ...", post_path(post) %>
+      </div>
+
+    </div>
+  </div>
+  <hr>
+<% end %>
+
+
+<%= link_to "Add posts", new_post_path %>

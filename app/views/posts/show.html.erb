@@ -1,0 +1,4 @@
+<h1 class="title"><%= @post.title %></h1>
+<p class="content"><%= @post.content %></p>
+<%= link_to "Edit post", edit_post_path(@post), class: "button is-primary"%>
+<%= link_to "Delete post", post_path(@post), method: :delete, data: {notice: "Are you sure?"},class: "button is-danger"%>

@@ -1,0 +1,24 @@
+  <%= simple_form_for @post do |f| %>
+  
+    <div class="field">
+      <label class="label">
+        <%= f.label :title %>
+      </label>
+      <div class="control">
+        <%= f.text_field :title, class: "input", placeholder: "Title" %>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">
+        <%= f.label :content %>
+      </label>
+      <div class="control">
+        <%= f.text_area :content, class: "textarea", placeholder: "Content", rows: 10 %>
+      </div>
+    </div>
+  
+    <div class="control">
+      <%= f.submit "Submit", class: "button is-primary" %>
+    </div>
+  <% end %>
