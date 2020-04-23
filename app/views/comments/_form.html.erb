@@ -1,0 +1,24 @@
+  <%= simple_form_for([@post, @post.comments.build]) do |f| %>
+  
+    <div class="field">
+      <label class="label">
+        <%= f.label :name %>
+      </label>
+      <div class="control">
+        <%= f.text_field :name, class: "input", placeholder: "Title" %>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">
+        <%= f.label :message %>
+      </label>
+      <div class="control">
+        <%= f.text_area :message, class: "textarea", placeholder: "Content", rows: 5 %>
+      </div>
+    </div>
+  
+    <div class="control">
+      <%= f.submit "Leave a reply", class: "button is-primary" %>
+    </div>
+  <% end %>

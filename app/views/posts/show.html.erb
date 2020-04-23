@@ -1,4 +1,19 @@
 <h1 class="title"><%= @post.title %></h1>
-<p class="content"><%= @post.content %></p>
-<%= link_to "Edit post", edit_post_path(@post), class: "button is-primary"%>
+<p class="content"><%= simple_format @post.content %></p>
+<br>
+<p><%= link_to "Back - list all", posts_path, class: "button is-primary" %></p>
+<br>
+<%= link_to "Edit post", edit_post_path(@post), class: "button is-primary" %>
 <%= link_to "Delete post", post_path(@post), method: :delete, data: {notice: "Are you sure?"},class: "button is-danger"%>
+
+<div class="section comments">
+  <div class="container">
+    <h2 class="subtitle is-5"><strong><%= @post.comments.count %></strong> Comments</h2>
+    <%= render 'comments/messages' %>
+    <div class="comment-form">
+      <hr />
+      <h3 class="subtitle is-3">Leave a reply</h3>
+      <%= render 'comments/form' %>
+    </div>
+  </div>
+</div>

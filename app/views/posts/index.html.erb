@@ -11,17 +11,14 @@
         </div>
       </div>
 
-      <div class="content">
-        <%= post.content %>
+      <div class="content nuri" >
+        <%= simple_format post.content %>
       </div>
-      <div class="content">
+      <div class="alert">
         <%= link_to "Read more ...", post_path(post) %>
       </div>
 
     </div>
   </div>
-  <hr>
 <% end %>
 
-
-<%= link_to "Add posts", new_post_path %>

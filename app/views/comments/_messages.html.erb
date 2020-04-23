@@ -1,0 +1,8 @@
+<% @post.comments.each do |comment| %>
+<div>
+  <p>
+    <strong><%= comment.name %>:  </strong><%= simple_format comment.message %>
+    <%= link_to "delete", [comment.post, comment], method: :delete, class: "button is-danger", data: { confirm: "Are you sure"}  %>
+  </p>
+</div>
+<% end %>
